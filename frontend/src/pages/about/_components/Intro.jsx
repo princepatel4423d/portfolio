@@ -7,7 +7,7 @@ const Intro = () => {
     <div>
       <div className="flex flex-col md:flex-row py-10 items-stretch gap-6">
         <div className="flex-1">
-          <h1 className="text-2xl font-bold mb-3">About Me</h1>
+          <h1 className="text-lg sm:text-xl md:text-2xl font-bold mb-3">About Me</h1>
 
           <p className="text-xs sm:text-sm md:text-base mb-3">
             My name is <strong>Prince Patel</strong>, a dedicated developer based in Idar, Gujarat - India.
@@ -52,11 +52,12 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="md:w-1/3 hidden md:flex">
+        {/* Image now shows on all screen sizes */}
+        <div className="md:w-1/3 w-full flex justify-center md:justify-end">
           <img
             src={MyImg}
             alt="Prince Patel"
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full max-w-xs md:max-w-full h-auto object-cover rounded-2xl"
           />
         </div>
       </div>
