@@ -12,7 +12,10 @@ const port = process.env.PORT || 5000;
 connectDB();
 
 // Allow frontend origin
-const allowedOrigins = ['https://portfolio-backend-c0zf.onrender.com'];
+const allowedOrigins = [
+  'https://portfolio-frontend-o54i.onrender.com',
+  'http://localhost:5173' // optional for local testing
+];
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
