@@ -1,0 +1,107 @@
+@layer base {
+    html {
+        scrollbar-color: #404040 transparent;
+        scrollbar-width: thin;
+    }
+
+    html::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        background-color: #404040;
+        border-radius: 0.5rem;
+    }
+
+    * {
+        scrollbar-width: thin;
+    }
+
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #404040;
+        border-radius: 0.5rem;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    body {
+        background-color: #fafafa;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+        color: #171717;
+    }
+
+    body::selection {
+        background-color: #171717;
+        color: #fafafa;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #0a0a0a;
+            color: #d4d4d4;
+        }
+
+        body::selection {
+            background-color: #fafafa;
+            color: #0a0a0a;
+        }
+    }
+
+    /* Syntax Highlighting */
+    pre[data-theme='dark'] {
+        color-scheme: dark;
+    }
+
+    html.light {
+
+        code[data-theme*=' '],
+        code[data-theme*=' '] span {
+            color: var(--shiki-light);
+        }
+
+        .on-dark {
+            display: none;
+        }
+
+    }
+
+    html.dark {
+
+        code[data-theme*=' '],
+        code[data-theme*=' '] span {
+            color: var(--shiki-dark);
+        }
+
+        .on-light {
+            display: none;
+        }
+
+    }
+}
+
+@layer base {
+    :root {
+        --email-color: 0 0% 9%;
+        --github-color: 0 1% 9%;
+        --codepen-color: 0 1% 9%;
+        --linkedin-color: 213 90% 41%;
+        --stack-overflow-color: 27 91% 56%;
+        --reddit-color: 16 100% 50%;
+        --twitter-color: 206 89% 53%;
+        --instagram-color: 351 75% 57%;
+        --arch-color: 200 80% 45%;
+    }
+
+    .dark {
+        --email-color: 0 0% 96%;
+        --github-color: 210 28% 94%;
+        --codepen-color: 210 28% 94%;
+    }
+}

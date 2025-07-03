@@ -1,0 +1,41 @@
+@layer utilities {
+    .limits {
+        border-width: 1px;
+        border-color: #dc2626;
+        /* red-600 */
+        background-color: #3b82f6;
+        /* blue-500 */
+    }
+
+    .shine {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 33.333333%;
+        transform: translateX(-100%) skewX(-20deg);
+        background-color: rgba(255, 255, 255, 0);
+        /* white/0 */
+        background-image: linear-gradient(to right,
+                rgba(255, 255, 255, 0),
+                rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0));
+        color: rgba(255, 255, 255, 0);
+    }
+
+    /* Dark mode variant for .shine */
+    @media (prefers-color-scheme: dark) {
+        .shine {
+            background-image: linear-gradient(to right,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0.1),
+                    rgba(255, 255, 255, 0));
+        }
+    }
+
+    .side-text {
+        transform: scaleX(-1);
+        /* flip horizontally */
+        writing-mode: vertical-rl;
+    }
+}
