@@ -26,7 +26,7 @@ export function Footer() {
                         text-neutral-500 dark:text-neutral-400 
                         md:flex">
           <Link
-            href="https://github.com/princepatel4423d"
+            href="https://github.com/princepatel4423d/portfolio/blob/main/LICENSE"
             rel="license"
           >
             <span>License</span>
